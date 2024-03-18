@@ -41,4 +41,4 @@ console.log(partialSum(3));  // Returns 6
 
 ### REFERENCE:
 
-([Currying & Partial Application](https://borstch.com/blog/currying-and-partial-application-in-javascript))
+[Currying & Partial Application](https://borstch.com/blog/currying-and-partial-application-in-javascript)
