@@ -6,11 +6,11 @@ const person = {
 };
 
 const showPerson = {
-  show() {
-    console.log(`${this.name} job is ${this.job}`);
+  show(city) {
+    console.log(`${this.name} job is ${this.job} and he lives in ${city}`);
   },
 };
 
 console.log(showPerson.show()); // undefined job is undefined
 
-console.log(showPerson.show.call(person)); // showPerson.show is a invoking functions
+console.log(showPerson.show.call(person, "Pune")); // showPerson.show is a invoking functions
