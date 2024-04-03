@@ -8,6 +8,27 @@ To understand Prototype we need to first understand what is prototypal inheritan
 - Basically via prototype one object is able to access the methods and properties of another object.
 - **Both prototype and **proto** are same**
 
+```js
+const person = {
+  name: "Sandeep",
+  age: "29",
+  gender: "Male",
+};
+
+const employmentDetails = {
+  company: "Publicis Sapient",
+  doj: "21/09/2021",
+};
+
+console.log(person.company); // undefined
+// person ---> Object.Prototype ---> null
+
+person.__proto__ = employmentDetails; // setting the prototype for person object
+
+console.log(person.company); // Publicis Sapient
+// person ---> employmentDetails ---> Object.Prototype ---> null
+```
+
 ## Difference between prototype Vs \***\*proto\*\***
 
 - For Constructor function (inbuilt or declared Explicitly) or any normal function → **prototype works**
@@ -27,5 +48,39 @@ Array.__proto__; // undefined
 const someArrowFunction = () => {}; //
 someArrowFunction.prototype; // undefined
 ```
+
+## Ways to create prototype:
+
+- Normal object creation:
+
+```js
+const abc = {
+  a: 1,
+  __proto__: {
+    b: 2,
+  },
+};
+// abc ---> {b:2} ---> Objet.prototype ---> null
+```
+
+- Using constructor function:
+
+```js
+function Bottle(){
+    this.type= 'Plastic',
+    this.capacity = '500ML',
+}
+
+Bottle.prototype.color = function(color){
+    this.color = color,
+}
+// abc ---> {b:2} ---> Objet.prototype ---> null
+```
+
+- Similarly using classes
+- USing object.create()
+- Using object.setPrototypeOf()
+
+## Difference between hasOwnProperty vs object[key] while iterating over the object
 
 [Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
