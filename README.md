@@ -8,3 +8,18 @@
 - Explain Memoization?
 - What are Service Workers?
 - Explain Different Caching Techniques/mechanisms?
+- <details>
+    <summary> Difference between slice Vs Splice</summary>
+     ## Slice
+    1. Uses to make the **shallow copy** of the array & **do not mutate the original array**
+    2. >**Syntax** slice(optional start parameter, optional end parameter)
+
+  ## Splice
+
+  1. Mutates the original array
+  2. > Syntax: splice(start, optional delete count, optional items to add)
+  </details>
+
+  ## DSA Interview Questions
+
+  [Please Refer this link](./DSA%20Questions/DSA_Questions.md)

@@ -33,7 +33,7 @@ console.log(person.company); // Publicis Sapient
 
 - For Constructor function (inbuilt or declared Explicitly) or any normal function → **prototype works**
 - For any variable/instance ⇒ \***\*proto\*\***
-- Note: For Array functions: **does not have a default prototype property**
+- Note: For Arrow functions: **does not have a default prototype property**
 
 ```js
 // For declared variables
